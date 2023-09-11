@@ -101,7 +101,7 @@ export const Home = () => {
         </div>
         <div className="flex flex-col  w-1/4  fixed right-0 bottom-[35%] ">
           <p className="mb-[12px] text-center tracking-normal font-montserrat font-medium text-[19px]">
-            Nigerians Travel Level: {levelSum}
+            Nigeria Travel Level: {levelSum}
           </p>
           <div className="bg-green-500 rounded-2xl shadow-xl py-[10px]">
             {MENU_OPTIONS.map((info) => (
