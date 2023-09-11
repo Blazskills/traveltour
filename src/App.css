@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }  
+
+  /* Tooltip Styles */
+.tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: rgb(255, 0, 0);
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 23px;
+  pointer-events: none; /* To prevent the tooltip from interfering with mouse events */
+  display: block; /* Initially hide the tooltip */
+}
