@@ -86,6 +86,25 @@ export const Home = () => {
     };
   }, []);
 
+  const [screenW, setScreenW] = useState(window.innerWidth);
+  console.log(`live update ${window.innerWidth}`);
+  useEffect(() => {
+    // Function to update screen width
+    const updateScreenWidth = () => {
+      const newScreenWidth = window.innerWidth;
+      setScreenW(newScreenWidth);
+      console.log(newScreenWidth); // Log the updated screen width
+    };
+
+    // Add event listener for the "resize" event
+    window.addEventListener("resize", updateScreenWidth);
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", updateScreenWidth);
+    };
+  }, []);
+
   return (
     <section className="">
       <div className="mb-[20px]">
@@ -99,10 +118,15 @@ export const Home = () => {
         >
           <p>{tooltipContent}</p>
         </div>
-        <div className="flex flex-col  w-1/4  fixed right-0 bottom-[35%] ">
+        <div
+          className={`flex flex-col ${
+            screenW <= 768 ? "static m-1" : "fixed right-5 bottom-5 "
+          }`}
+        >
           <p className="mb-[12px] text-center tracking-normal font-montserrat font-medium text-[19px]">
             Nigeria Travel Level: {levelSum}
           </p>
+
           <div className="bg-green-500 rounded-2xl shadow-xl py-[10px]">
             {MENU_OPTIONS.map((info) => (
               <div key={info.label} className="px-5 py-2">
@@ -125,14 +149,28 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      <div className="">
+      <div className="flex items-center justify-center bg-white">
         <svg
           viewBox="0 0 744.24 599.93"
           xmlns="http://www.w3.org/2000/svg"
-          width="1363"
-          height="943"
+          width={
+            screenW < 320 && screenW <= 425
+              ? "500"
+              : screenW >= 769
+              ? "2500"
+              : "1500"
+          }
+          height={
+            screenW <= 425
+              ? "300"
+              : screenW > 425 && screenW <= 1024
+              ? "700"
+              : screenW >= 1025
+              ? "900"
+              : "300"
+          }
           fill="green"
-          enableBackground="red"
+          enableBackground="green"
         >
           {STATES.map((state) => (
             <path
