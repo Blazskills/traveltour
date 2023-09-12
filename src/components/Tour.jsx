@@ -8,7 +8,7 @@ export const Tour = () => {
           <img
             src={mg1}
             alt={mg1}
-            className="hover:opacity-[0.9] opacity-40 laptop1440up:w-full"
+            className="hover:opacity-[0.9] opacity-40 laptop1440up:w-full  w-full"
           />
           <div className="flex flex-col absolute bottom-5 left-10">
             <p className="font-bold text-white uppercase">Abuja</p>
@@ -21,7 +21,7 @@ export const Tour = () => {
           <img
             src={mg2}
             alt={mg2}
-            className="hover:opacity-[0.9] opacity-40 object-cover laptop1440up:w-full"
+            className="hover:opacity-[0.9] opacity-40 object-cover laptop1440up:w-full  w-full"
           />
           <div className="flex flex-col absolute bottom-5 left-10">
             <p className="font-bold text-white uppercase">Lagos</p>
