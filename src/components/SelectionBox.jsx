@@ -29,40 +29,40 @@ const SelectionBox = ({ pathId, event, openboxset }) => {
       className="w-[200px] selection-box flex flex-col justify-center items-center gap-y-2 rounded-xl py-5 bg-white border-2 border-red-800"
       style={boxStyle}
     >
-      <p className="font-extrabold capitalize text-center">{pathId}:</p>
+      <p className="font-extrabold capitalize text-center laptop1440up:text-[25px]">{pathId}:</p>
       <button
         onClick={() => handleOptionClick("5", "#166434")}
-        className="hover:bg-green-800 hover:text-white w-full py-1"
+        className="hover:bg-green-800 hover:text-white w-full py-1 laptop1440up:text-[25px]" 
       >
         Lived there
       </button>
       <button
         onClick={() => handleOptionClick("4", "#573308")}
-        className="hover:bg-[#573307] hover:text-white w-full py-1"
+        className="hover:bg-[#573307] hover:text-white w-full py-1 laptop1440up:text-[25px]"
       >
         Stayed there
       </button>
       <button
         onClick={() => handleOptionClick("3", "#FACC14")}
-        className="hover:bg-yellow-400 hover:text-white w-full py-1"
+        className="hover:bg-yellow-400 hover:text-white w-full py-1 laptop1440up:text-[25px]"
       >
         Visited there
       </button>
       <button
         onClick={() => handleOptionClick("2", "#1D40AF")}
-        className="hover:bg-blue-800 hover:text-white w-full py-1"
+        className="hover:bg-blue-800 hover:text-white w-full py-1 laptop1440up:text-[25px]"
       >
         Alighted there
       </button>
       <button
         onClick={() => handleOptionClick("1", "#F77171")}
-        className="hover:bg-red-400 hover:text-white w-full py-1"
+        className="hover:bg-red-400 hover:text-white w-full py-1 laptop1440up:text-[25px]"
       >
         Passed there
       </button>
       <button
         onClick={() => handleOptionClick("0", "#ffffff")}
-        className="hover:bg-slate-gray hover:text-white w-full pt-1"
+        className="hover:bg-slate-gray hover:text-white w-full pt-1 laptop1440up:text-[25px]"
       >
         Never been there
       </button>

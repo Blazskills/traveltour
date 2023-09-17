@@ -157,17 +157,17 @@ export const Home = () => {
             screenW < 320 && screenW <= 425
               ? "500"
               : screenW >= 769
-              ? "2500"
+              ? "2000"
               : "1500"
           }
           height={
             screenW <= 425
               ? "300"
               : screenW > 425 && screenW <= 1024
-              ? "700"
-              : screenW >= 1025
-              ? "900"
-              : "300"
+              ? "450"
+              : screenW >= 1025 && screenW <= 1504
+              ? "530"
+              : "1500"
           }
           fill="green"
           enableBackground="green"
